@@ -31,6 +31,6 @@ def __create_notification_message(filtered_pull_requests):
     message += "Please, take o look at it ;) \n"
 
     for pull_request in filtered_pull_requests:
-        message += " - <{link}|{title}> \n".format(link = pull_request.html_url, title = pull_request.title)
+        message += " - <{link}|{title}> \n".format(link = pull_request["html_url"], title = pull_request["title"])
     
     return message
